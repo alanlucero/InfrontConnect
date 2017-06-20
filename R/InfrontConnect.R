@@ -2,8 +2,10 @@ library(jsonlite)
 library(httr)
 library(plyr)
 
+#' @export
 .feedmap <- read.csv(url("http://alanlucero.kissr.com/feeds.csv"))
 
+#' @export
 InfrontConnect <- function(username, password) {
     .username <<- username
     .password <<- password
@@ -21,7 +23,7 @@ InfrontConnect <- function(username, password) {
     comply with any applicable, conditions, restrictions, or limitations imposed by such \n Data Providers.")
 
 }
-
+#' @export
 FeedParser <- function(string) {
     feed_ticker <- as.list(strsplit(string, ":")[[1]])
     feed_id <- feed_ticker[[1]]
@@ -29,14 +31,14 @@ FeedParser <- function(string) {
     feednu <- .feedmap$feednu[which(feed_id == .feedmap$feedcode)]
     return(feednu)
 }
-
+#' @export
 TickerParser <- function(string) {
     feed_ticker <- as.list(strsplit(string, ":")[[1]])
     ticker_id <- feed_ticker[[2]]
 
     return(ticker_id)
 }
-
+#' @export
 ListToJSON <- function(string) {
     instruments = c()
     for (inst in c(1:length(string))) {
@@ -46,7 +48,7 @@ ListToJSON <- function(string) {
     }
     return(instruments)
 }
-
+#' @export
 ListAppend <- function(existinglist, itemtoadd) {
     returnvalue <- c(existinglist, itemtoadd)
     return(returnvalue)
@@ -63,7 +65,7 @@ ListAppend <- function(existinglist, itemtoadd) {
 #' @export
 #' @examples GetHistory(c("OSS:STL","OSS:YAR"), c("LAST"), "2017-01-13", "2017-01-18")
 #' GetHistory()
-
+#' @export
 GetHistory <- function(tickers, fields, start_date, end_date) {
 
     if (missing(tickers)) {
