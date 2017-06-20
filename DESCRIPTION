@@ -5,7 +5,7 @@ Date: 2017-01-20
 Authors@R: person("Alan", "Lucero", email = "alan.lucero@infrontfinance.com", role = c("aut", "cre"))
 Mainteiner: Alan Lucero <alan.lucero@infrontfinance.com>
 Description: Infront Desktop API for R.
-Depends: R (>= 3.3.3)
+Depends: R (>= 3.3.3), jsonlite, httr, plyr
 License: GPL (>=2)
 Encoding: UTF-8
 LazyData: true
