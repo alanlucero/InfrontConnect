@@ -10,7 +10,15 @@ InfrontConnect <- function(username, password) {
     cat("Connected to Infront Desktop API for R \n")
     cat("\n")
     cat("**Disclaimer** \n")
-    cat(" End-User agrees not to redistribute any such Information and to comply with any \n restrictions placed on such information by the providers thereof, hereunder but \n not limited to acceptance of and compliance with Data Providers’ and/or other \n third party license agreements. \n Customer agrees to indemnify and keep indemnified Infront and its affiliates harmless \n from and against any loss, damage, liability, cost, charges and expenses, including \n reasonable legal fees, arising out of any breach on part of Customer with respect to \n its obligations to obtain prior approvals from appropriate Data Providers and to \n comply with any applicable, conditions, restrictions, or limitations imposed by such \n Data Providers.")
+    cat(" End-User agrees not to redistribute any such Information and to comply with any \n
+    restrictions placed on such information by the providers thereof, hereunder but \n 
+    not limited to acceptance of and compliance with Data Providers’ and/or other \n 
+    third party license agreements. \n 
+    Customer agrees to indemnify and keep indemnified Infront and its affiliates harmless \n 
+    from and against any loss, damage, liability, cost, charges and expenses, including \n 
+    reasonable legal fees, arising out of any breach on part of Customer with respect to \n 
+    its obligations to obtain prior approvals from appropriate Data Providers and to \n 
+    comply with any applicable, conditions, restrictions, or limitations imposed by such \n Data Providers.")
 
 }
 
