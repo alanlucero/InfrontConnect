@@ -94,7 +94,12 @@ GetHistory <- function(tickers, fields, start_date, end_date) {
     if (!is.character(end_date)) {
         stop("'start_date' input must be a string of class 'character' in the format 'YYYY-MM-DD'")
     }
-    
+
+    for (i in c(1:length(fields))) {
+        if (fields[i] == "volume") {
+            fields[i] = "prev_volume"
+        }
+    }
     request_payload = list(
                            user = .username,
                            password = .password,
@@ -141,3 +146,6 @@ return(inst_list)
 cat("Data Succesfully imported!")
 
 }
+
+
+
